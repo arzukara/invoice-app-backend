@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import invoices from "./routes/invoice.js";
 
-const PORT = 5050;
+const PORT = 4000;
 const app = express();
 
 app.use(cors());
