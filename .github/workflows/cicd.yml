@@ -23,5 +23,7 @@ jobs:
         steps:
             - name: Pull Image from the docker hub
               run: docker pull akara840/mern-app-backend:latest
+            - name: Delete old container
+              run: docker rm -f mern-app-backend-container
             - name: Run Docker container
               run: docker run -d -p 5050:5050 --name mern-app-backend-container -e ATLAS_URI=${{secrets.ATLAS_URI}} akara840/mern-app-backend
