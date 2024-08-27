@@ -30,13 +30,23 @@ The backend handles API requests, connects to the MongoDB database, and serves d
     ```
     npm install
     ```
-3. Configure environment variables:
+3. Configure environment variables:_
     Create a .env file in the root directory. Project requires a url to connect mongodb.
     For more info and example =>[How to Use MERN Stack: A Complete Guide](https://www.mongodb.com/resources/languages/mern-stack-tutorial)
     ```
     ATLAS_URI=connection_string_here
     ```
-4. Start the development server:
+4. Start the development server:_
+    To run the application in development mode, you will need `nodemon`. `Nodemon` is a tool that automatically restarts your Node.js application when file changes in the directory are detected, making it ideal for development environments.
+    ```
+    npm install nodemon --save-dev
+    ```
+Once nodemon is installed, you can start the development server using the following command:
     ```
     npm run dev
+    ```
+
+Alternatively, if you prefer not to use nodemon, you can run the application with:
+    ```
+    npm start
     ```
